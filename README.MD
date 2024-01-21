@@ -42,4 +42,10 @@ gf build  命令打包文件
 ```
 http://127.0.0.1:8003/apidoc
 ```
+7.参考文档
+官方文档：https://goframe.org
+学习笔记：https://gitee.com/unlimited13/code
+B站视频：https://www.bilibili.com/video/BV1Uu4y1u7kX
+
+
 
