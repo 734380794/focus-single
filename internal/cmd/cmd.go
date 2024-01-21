@@ -39,6 +39,11 @@ var (
 			}
 			s.AddStaticPath("/upload", uploadPath)
 
+			// 自定义接口文档
+			s.BindHandler("/apidoc", func(r *ghttp.Request) {
+				r.Response.WriteTpl("apidoc.html")
+			})
+
 			// HOOK, 开发阶段禁止浏览器缓存,方便调试
 			if gmode.IsDevelop() {
 				s.BindHookHandler("/*", ghttp.HookBeforeServe, func(r *ghttp.Request) {

@@ -8,6 +8,7 @@ gfcli:
     system:   "linux,darwin,windows"
     mod:      ""
     cgo:      0
+    packSrc: "manifest,resource"
 
   # dao生成
   gen:

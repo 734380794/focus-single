@@ -86,7 +86,7 @@ func (s *sMiddleware) Ctx(r *ghttp.Request) {
 	r.Middleware.Next()
 }
 
-// 前台系统权限控制，用户必须登录才能访问
+// 前台系统权限控制，用户必须登录才能访问（前置中间件）
 func (s *sMiddleware) Auth(r *ghttp.Request) {
 	user := service.Session().GetUser(r.Context())
 	if user.Id == 0 {
@@ -105,5 +105,6 @@ func (s *sMiddleware) Auth(r *ghttp.Request) {
 			r.Response.RedirectTo(s.LoginUrl)
 		}
 	}
+	// 路由放行
 	r.Middleware.Next()
 }

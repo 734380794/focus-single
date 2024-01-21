@@ -1,56 +1,45 @@
-# 1. Focus Single
 
-A `MVC` project using `GoFrame`.
+## 项目介绍
 
-# 2. Quick start
-
-## 2.1 If you use SQLite
-
-1. Download the source code
+1. 项目下载
 ```
 git clone https://github.com/gogf/focus-single.git
 cd focus-single
 ```
 
-2. Run Focus Single
+2. 更新配置那文件
+copy manifest/config/config.yaml 并且修改 database.default config
 ```
-cp manifest/config/config.example.yaml manifest/config/config.yaml
-gf run main.go
-```
-
-3. Enjoy it
-then open http://127.0.0.1:8199/ and enjoy it.
-
-```
-user:     goframe
-password: 123456
+cp manifest/config/config.yaml manifest/config/config.yaml
 ```
 
-## 2.2 If you use MySQL 
-
-1. Download the source code
-```
-git clone https://github.com/gogf/focus-single.git
-cd focus-single
-```
-
-2. Update config
-copy manifest/config/config.yaml and edit database.default config
-```
-cp manifest/config/config.example.yaml manifest/config/config.yaml
-```
-
-3. Import Db
+3. 导入Db
 Import manifest/document/focus.sql to your Mysql
 
-4. Run Focus Single And Enjoy
+4. 运行项目
 ```
 gf run main.go
 ```
 
-then open http://127.0.0.1:8199/ and enjoy it.
+接下来打开 http://127.0.0.1:8003/
 ```
 user:     goframe
 password: 123456
+```
+5. hack工具编译配置
+
+```
+build:
+name:     "focus"   项目名称
+arch:     "amd64"   内核
+system:   "linux,darwin,windows"    平台    
+packSrc: "manifest,resource" 资源打包
+```
+```
+gf build  命令打包文件
+```
+6. 接口文档
+```
+http://127.0.0.1:8003/apidoc
 ```
 
