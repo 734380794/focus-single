@@ -7,10 +7,10 @@ git clone https://github.com/gogf/focus-single.git
 cd focus-single
 ```
 
-2. 更新配置那文件
-copy manifest/config/config.yaml 并且修改 database.default config
+2. 更新配置文件
+修改 database.default config
 ```
-cp manifest/config/config.yaml manifest/config/config.yaml
+manifest/config/config.yaml
 ```
 
 3. 导入Db
